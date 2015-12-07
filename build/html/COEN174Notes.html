@@ -1,0 +1,2023 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>COEN 174: Software Development &mdash; COEN 174 - Software Engineering 1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="COEN 174 - Software Engineering 1 documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to COEN 174 - Software Engineering’s documentation!" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> COEN 174 - Software Engineering</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">COEN 174: Software Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-2-systems-vs-programs">Chapter 2: Systems vs Programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-6">Chapter 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-7">Chapter 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-8">Chapter 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-10">Chapter 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-11">Chapter 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-12-support-and-maintenance">Chapter 12: Support and Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chapter-4-software-process-models">Chapter 4: Software Process Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problems-with-traditional-processes">Problems with Traditional Processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#team-structures">Team Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agile-development">Agile Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-review">Final Review</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">COEN 174 - Software Engineering</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>COEN 174: Software Development</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/COEN174Notes.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="coen-174-software-development">
+<h1>COEN 174: Software Development<a class="headerlink" href="#coen-174-software-development" title="Permalink to this headline">¶</a></h1>
+<p>Fundemental theory of software development: everything can be solved by adding a level of indirection.</p>
+<div class="section" id="chapter-2-systems-vs-programs">
+<h2>Chapter 2: Systems vs Programs<a class="headerlink" href="#chapter-2-systems-vs-programs" title="Permalink to this headline">¶</a></h2>
+<p><strong>2015-09-23</strong></p>
+<ul class="simple">
+<li>How is a system different from a program?</li>
+</ul>
+<div class="section" id="complexity-of-the-actual-code">
+<h3>Complexity of the Actual Code<a class="headerlink" href="#complexity-of-the-actual-code" title="Permalink to this headline">¶</a></h3>
+<p>Systems typically have more depth and breadth than a single program</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt><em>breadth</em>: refers to the number and variety of components</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>more major functionality</dt>
+<dd><ul class="first last simple">
+<li>example: browse web-pages and read e-mail and edit web-pages all in the same place</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>more features within each function</dt>
+<dd><ul class="first last simple">
+<li>example: spam filtering within mail reader, spelling correction</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>more interface features</dt>
+<dd><ul class="first last simple">
+<li>example: fetch mail from a different place, export mail</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>more users</dt>
+<dd><ul class="first last simple">
+<li>not just number of users, but skill level also varies (novice versus experts)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>depth</em>: refers to the complexity and relationship among components</dt>
+<dd><ul class="first last simple">
+<li>more layers of abstraction</li>
+<li>more linkages between layers</li>
+<li>more libraries and frameworks being used</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="technical-concerns">
+<h3>Technical Concerns<a class="headerlink" href="#technical-concerns" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>which platform(s) will be used?</li>
+<li>which language(s) will be used?</li>
+<li>is a DB required?</li>
+<li>is it networked?</li>
+<li>is a configuraton management system required?</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="non-engineering-aspects">
+<h3>Non-engineering aspects<a class="headerlink" href="#non-engineering-aspects" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>more people and resources to coordinate</li>
+<li>people with different skills</li>
+<li>need to impose a team structure</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="chapter-6">
+<h2>Chapter 6<a class="headerlink" href="#chapter-6" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Main Points:</dt>
+<dd><ul class="first last simple">
+<li>What are requirements?</li>
+<li>What are the steps in requirements engineering?</li>
+<li>What are informal and formal methods of gathering describing and evaluating requirements?</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="what-are-requirements">
+<h3>What Are Requirements<a class="headerlink" href="#what-are-requirements" title="Permalink to this headline">¶</a></h3>
+<p>They are statements that describe what the system should/must do.
+They <em>do not</em> describe how the software is to be constructed.</p>
+<dl class="docutils">
+<dt>Top reason for project failure:</dt>
+<dd>Poorly defined requirements</dd>
+<dt>Top reason for porject success:</dt>
+<dd>Clearly defined requirements</dd>
+</dl>
+<p>If some requirements are <em>missing</em>, they are <em>incomplete</em>.
+If they are <em>conflicting</em>, then the are <em>ambiguous</em>.</p>
+<dl class="docutils">
+<dt>Requirements Engineering:</dt>
+<dd>The process of determining requirements</dd>
+<dt>Requirements engineering involves:</dt>
+<dd><ul class="first last">
+<li><p class="first">talk to the customer about what they want</p>
+</li>
+<li><p class="first">end up with a formal document that the customer can sign off on</p>
+</li>
+<li><dl class="first docutils">
+<dt>How to get from point a to point b</dt>
+<dd><ul class="first last simple">
+<li>using a <strong>process</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="requirements-process">
+<h4>Requirements Process<a class="headerlink" href="#requirements-process" title="Permalink to this headline">¶</a></h4>
+<p>A <strong>process</strong> is a framework used to guide system development</p>
+<dl class="docutils">
+<dt>It includes:</dt>
+<dd><ul class="first last simple">
+<li>tasks to be performed</li>
+<li>sequencing of tasks</li>
+<li>inputs and outputs</li>
+<li>pre-conditions and post conditions</li>
+</ul>
+</dd>
+<dt>Example:</dt>
+<dd><ul class="first last simple">
+<li>requirements -&gt; design -&gt; implementation -&gt; testing</li>
+<li>although in real life, the model is usually not this linear</li>
+</ul>
+</dd>
+<dt>The requirements process more explicitly is:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Elicitation: talk to the customer</dt>
+<dd><ul class="first last">
+<li><p class="first">Talk to the customer about what they want</p>
+</li>
+<li><p class="first">Focus on the <em>what</em> not the <em>how</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>Focus on high level requriements:</dt>
+<dd><ul class="first last simple">
+<li>deal wtith business concerns</li>
+<li>communication skills important</li>
+<li>justification (how will software save money)</li>
+<li>scope of the project</li>
+<li>constraints: schedule/cost</li>
+<li>user characteristics (who will be using the system)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Analysis: tabulated/sort/prioritize (i.e. analyze) the data from elicitation</p>
+</li>
+<li><dl class="first docutils">
+<dt>Definition, Prototyping, Review</dt>
+<dd><ul class="first last simple">
+<li>Definition: write it up informally</li>
+<li>Prototyping: build a prototype/mock up to get feedback</li>
+<li>Review: check it over</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Specification</p>
+</li>
+<li><p class="first">Agreement</p>
+</li>
+</ul>
+</dd>
+<dt>High-level reqs:</dt>
+<dd>deal with business issues</dd>
+<dt>Low-level reqs:</dt>
+<dd>more technical than high level reqs</dd>
+</dl>
+</div>
+<div class="section" id="why-do-we-need-requriements">
+<h4>Why do we Need Requriements<a class="headerlink" href="#why-do-we-need-requriements" title="Permalink to this headline">¶</a></h4>
+<p>For acceptance testing, you need requirements so that you know can know if you are delivering the right product
+Limit scope crrep.
+Planning for training and support.
+Scheduling the project.</p>
+<dl class="docutils">
+<dt>Competing requirements:</dt>
+<dd><ul class="first last simple">
+<li>Individual functionality versus contrains (reliability, security, performance)</li>
+<li>Systems with other interfaces (interoperability) versus data and formats</li>
+<li>Business flow versus user interfaces</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="different-systems-different-requirements">
+<h4>Different systems = Different Requirements<a class="headerlink" href="#different-systems-different-requirements" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Different systems will generally have different requirements.  Two backup systems could have different requirements and come out as two very different systems.</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Physical Environment:</dt>
+<dd><p class="first last">-where will system run?  one location? several?</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Interfaces:</dt>
+<dd><ul class="first last simple">
+<li>where is the input coming from?</li>
+<li>where is the outpt going?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Users</dt>
+<dd><ul class="first last simple">
+<li>Who will use the system?  different types? different types?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Functionality</dt>
+<dd><ul class="first last simple">
+<li>what will it do?  Contraints on time or space?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Documentation</dt>
+<dd><ul class="first last simple">
+<li>what kind? how detailed?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Data</dt>
+<dd><ul class="first last simple">
+<li>format? persistent? accuracy?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Resources</dt>
+<dd><ul class="first last simple">
+<li>what equipment and personnel are necessary?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Security</dt>
+<dd><ul class="first last simple">
+<li>Must access be controlled?  data backed up?</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Quality Assurance</dt>
+<dd><ul class="first last simple">
+<li>Will the system detect errors?  Mean time to failure?</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="requirements-analysis">
+<h4>Requirements Analysis<a class="headerlink" href="#requirements-analysis" title="Permalink to this headline">¶</a></h4>
+<p>Organizing and prioritizing the data gathered during the elicitation</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Important to ask if the customer is involved in this process</p>
+</div>
+<p>We will find that we are missing some information and other information is condradictory.</p>
+<p>Make assumptions (based on experience), document them and then validate them through prototyping</p>
+<div class="section" id="prioritizing-requirements">
+<h5>Prioritizing requirements<a class="headerlink" href="#prioritizing-requirements" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Set levels of requirements:</dt>
+<dd><ul class="first last simple">
+<li>absolutetly necessary/critical</li>
+<li>highly desirable/recommended</li>
+<li>possible/suggested</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="analytical-hierarchy-process-ahp">
+<h5>Analytical Hierarchy Process (AHP)<a class="headerlink" href="#analytical-hierarchy-process-ahp" title="Permalink to this headline">¶</a></h5>
+<p>More rigerous approach to prioritizing.
+The key idea is that you compare compoenents or requirements pairwise.</p>
+<blockquote>
+<div>R1  R2  R3</div></blockquote>
+<p>R1  1   3   5
+R2  1/3 1   1/2
+R3  1/5 2   1</p>
+<p>R1 is 3 times as important as R2, and 5 times as important as R3.</p>
+<p>normalize each column (divide each element by the sum so that the sum of each column is 1)</p>
+<blockquote>
+<div>R1      R2      R3</div></blockquote>
+<p>R1  .65     .5      .77 |   1.92
+R2  .22     .17     .08 |   .047
+R3  .13     .33     .15 |   .061</p>
+<p>Sum each row and then divide each sum by the sum of sums.  Gives you a percentage that each requirement that each has.
+R1 is the most important, R3 is the second most important, R2 is the least.</p>
+<dl class="docutils">
+<dt>Another example:</dt>
+<dd><p class="first">3 requirements (R1, R2, R3)
+R1 is 4x as impoartant as R2 and 2x as imporant as R3
+R3 is 2x as important as R2</p>
+<blockquote>
+<div>R1  R2  R3</div></blockquote>
+<p>R1  1   4   2       | R1 is 4R2 and 2R3
+R2  1/4 1   1/2     | R2 is 1/4R2 and 1/2R3
+R3  1/2 2   1       | R3 is 1/2R1 and 2R2</p>
+<dl class="docutils">
+<dt><em>normalize, sum each row and then divide the sum of each row by the sum of the sums of each row</em></dt>
+<dd>R1  R2  R3</dd>
+</dl>
+<p>R1  4/7 4/7 4/7     | 4/7
+R2  1/7 1/7 1/7     | 1/7
+R3  2/7 2/7 1/7     | 2/7</p>
+<blockquote class="last">
+<div>1   1   1       | 1</div></blockquote>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="requirements-definition-prototyping-reviews">
+<h4>Requirements Definition, Prototyping, Reviews<a class="headerlink" href="#requirements-definition-prototyping-reviews" title="Permalink to this headline">¶</a></h4>
+<p>The customer is involved in all of these steps.</p>
+<dl class="docutils">
+<dt>Definition:</dt>
+<dd>involves writing up the reqs</dd>
+</dl>
+<p>If we need clarification we can prototype.</p>
+<dl class="docutils">
+<dt>Prototypes are common for user interfaces:</dt>
+<dd>low-fidelity: paper/cards
+high-fidelity: mockup in browser/Visual Basic</dd>
+</dl>
+<p>Results go through review.</p>
+</div>
+<div class="section" id="requirement-specification">
+<h4>Requirement Specification<a class="headerlink" href="#requirement-specification" title="Permalink to this headline">¶</a></h4>
+<p>Customer is <strong>not</strong> involved in this phase, but thye will sign off on this at the end.</p>
+<dl class="docutils">
+<dt>In some orgs:</dt>
+<dd><ul class="first last simple">
+<li>requirements doc:     written for customer</li>
+<li>requirements spec:    written for engineers/technical teams</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some specification languages are even executable</p>
+</div>
+</div>
+<div class="section" id="requirements-agreement">
+<h4>Requirements Agreement<a class="headerlink" href="#requirements-agreement" title="Permalink to this headline">¶</a></h4>
+<p>Customer is involved.</p>
+<p>This signals that the requirements phase is over.</p>
+</div>
+</div>
+<div class="section" id="analysis-models">
+<h3>Analysis models<a class="headerlink" href="#analysis-models" title="Permalink to this headline">¶</a></h3>
+<p>Formal model is used to write-up the results of analysis</p>
+<dl class="docutils">
+<dt>Structure analysis:</dt>
+<dd>Developed in 1960s.</dd>
+<dt>Unified Modeling Language (UML):</dt>
+<dd>Developed in 1990s.</dd>
+<dt>How do structured analysis and OO analysis differ?</dt>
+<dd>Structured analysis considers data and operations seperately; whereas, OO analysis considers them together.</dd>
+</dl>
+<div class="section" id="scenario-based-models">
+<h4>Scenario-based models<a class="headerlink" href="#scenario-based-models" title="Permalink to this headline">¶</a></h4>
+<p>User satisfaction is key to success of a system.
+Therefore models involving the user are usually constructed first.</p>
+<dl class="docutils">
+<dt>use-case:</dt>
+<dd>describes how a user interacts with the system to accomplish some goal or perform something.</dd>
+<dt>The diagram itself is not enough.  We also need narriative:</dt>
+<dd><ul class="first last simple">
+<li>preconditions</li>
+<li>postconditions</li>
+<li>actor(s)</li>
+<li>goal</li>
+<li>name</li>
+<li>expectations</li>
+<li>steps in a  typical sequence</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These should only be done in the scope of the system</p>
+</div>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd><ul class="first last simple">
+<li>name:             login</li>
+<li>precondition:     none</li>
+<li>postcondition:    user authenticated</li>
+<li>goal:             authenticate user</li>
+<li>steps:            1) enter username, 2) enter password, 3)information is submitted, 4) user taken to landing screen</li>
+<li>exceptions:       username/password incorrect (user will be prompted again)</li>
+<li></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="activity-diagrams">
+<h4>Activity Diagrams<a class="headerlink" href="#activity-diagrams" title="Permalink to this headline">¶</a></h4>
+<p>Shows the dynamic behavior of the system (or part of the system).  Looks much like a flowchart but also has notation for concurrency</p>
+</div>
+<div class="section" id="swimlane-diagrams">
+<h4>Swimlane Diagrams<a class="headerlink" href="#swimlane-diagrams" title="Permalink to this headline">¶</a></h4>
+<p>Activity diagrams but with responsibilities assigned</p>
+<p>Place each part of the activity digram in a column and then assign each column to a person.</p>
+</div>
+<div class="section" id="database-models">
+<h4>Database Models<a class="headerlink" href="#database-models" title="Permalink to this headline">¶</a></h4>
+<p>Identify data and their relationships.  A <em>data object</em> is simply composite information.</p>
+<dl class="docutils">
+<dt>Ex:</dt>
+<dd><dl class="first last docutils">
+<dt>object = person</dt>
+<dd>attribute = first name, last name</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="data-flow-diagram-dfd">
+<h5>Data Flow Diagram (DFD)<a class="headerlink" href="#data-flow-diagram-dfd" title="Permalink to this headline">¶</a></h5>
+<p>Models how data is transformed as it flows through the system.
+Can be decomposed heirarchically.</p>
+</div>
+<div class="section" id="entity-relationship-diagrams-erd">
+<h5>Entity Relationship Diagrams (ERD)<a class="headerlink" href="#entity-relationship-diagrams-erd" title="Permalink to this headline">¶</a></h5>
+<p>entities are just objects.</p>
+<dl class="docutils">
+<dt>Cardinality:</dt>
+<dd>Displaying the difference between 1 object and many objects (| for 1, &gt; for many)</dd>
+<dt>Modality:</dt>
+<dd>Display the difference between optional and mandatory objects (O for optional, | mandatory)</dd>
+<dt>Ex:</dt>
+<dd><p class="first">Course <a href="#id1"><span class="problematic" id="id2">|</span></a>&#8212;- [instance of] &#8212;&#8212; &lt;class</p>
+<p class="last">There are multiple classes for one course.</p>
+</dd>
+</dl>
+<p>Ex: Senior Design</p>
+<blockquote>
+<div><p>Student &gt;|&#8212;- [member] &#8212;&#8211;|| team &gt;|&#8212;- [advises] &#8212;-<a href="#id3"><span class="problematic" id="id4">|</span></a>&lt;advisor</p>
+<p>Every student is a member of a team, and teams are made up of multiple students. Teams must have students, and all students (limited scope to senior design students) must have a team
+A team can have multiple advisors, and advisors can have multiple teams.   Each team must have an advisor, and each advisor must have a team.</p>
+</div></blockquote>
+</div>
+<div class="section" id="behavior-based-models">
+<h5>Behavior Based Models<a class="headerlink" href="#behavior-based-models" title="Permalink to this headline">¶</a></h5>
+<p>ERD: Describes objets and their relationships.</p>
+<p>DFD: Describes how data is transfomred.</p>
+<p>Neither of these describes the behavior of the data. State Transition Diagrams (STDs) and Sequence Diagrams (UML) explain the behavior.</p>
+<dl class="docutils">
+<dt>Example of STD: copier</dt>
+<dd>Reading comds.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="chapter-7">
+<h2>Chapter 7<a class="headerlink" href="#chapter-7" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Main Points:</dt>
+<dd><ul class="first last simple">
+<li>High level vs low level design</li>
+<li>Architectural Styles</li>
+<li>UML class diagrams</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="what-is-design">
+<h3>What is Design?<a class="headerlink" href="#what-is-design" title="Permalink to this headline">¶</a></h3>
+<p>Design is the <em>how</em>.</p>
+<p>Design is the process of taking a problem and coming up with a solution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Engineering = putting science into practice paying attention to efficiency, economy and safety.</p>
+</div>
+<p>Design is the process of taking a problem and coming up with a solution that meets established and proessional practices</p>
+</div>
+<div class="section" id="levels-of-design">
+<h3>Levels of Design<a class="headerlink" href="#levels-of-design" title="Permalink to this headline">¶</a></h3>
+<p>Architectural design: high level design describing the major componenets</p>
+<p>Detailed design: low level design describing modules, classes,etc.</p>
+<p>In theory, each design decision, should related to one module and or one requirement.
+In practice, this does not happen, so we will use traceability tables.</p>
+<dl class="docutils">
+<dt>Ex:</dt>
+<dd>Req     | D1    |   D2  |   D3  |   D4  |
+R1      | X
+R2      |       |   X
+R3      |           X       X   |
+R4      |           X               X</dd>
+</dl>
+<p>Shows which desicions meet what requirements.</p>
+</div>
+<div class="section" id="software-architectures">
+<h3>Software Architectures<a class="headerlink" href="#software-architectures" title="Permalink to this headline">¶</a></h3>
+<p>Describes how the software is put together or structured.  High-level view of the system.  May not show all components or connections for simplicity.</p>
+<div class="section" id="architectural-styles">
+<h4>Architectural Styles<a class="headerlink" href="#architectural-styles" title="Permalink to this headline">¶</a></h4>
+<p>Each style conjures up mentally a picture of what the structure of the system is.</p>
+<dl class="docutils">
+<dt>Three Cs of arch-styles:</dt>
+<dd><ul class="first last simple">
+<li>componenets:  things that do the work</li>
+<li>connectors:  things that transport between coponenets</li>
+<li>constraints:  limits on the number and or type of connectors or components to acheive the style</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The good and the bad is for each architecture is tied to the constraint</p>
+</div>
+<div class="section" id="data-centric-architectures">
+<h5>Data Centric Architectures<a class="headerlink" href="#data-centric-architectures" title="Permalink to this headline">¶</a></h5>
+<p>Repository: client is active, data store is passive
+Blackboard: clients are passive, data share active</p>
+<p>Components: clients and data store
+Connectors: read/write functions from clients to data store
+Constraints: Clients don&#8217;t talk to eachother (clients are independent)</p>
+<p>good: Easy for clients to come and go
+bad: Single point of failure</p>
+</div>
+<div class="section" id="data-flow-architecture">
+<h5>Data Flow Architecture<a class="headerlink" href="#data-flow-architecture" title="Permalink to this headline">¶</a></h5>
+<p>Pipes and filters</p>
+<dl class="docutils">
+<dt>Ex: UNIX shell</dt>
+<dd>$ grep pattern file | greap pattern | sort | less</dd>
+</dl>
+<p>Components: filters
+Connectors: Pipes
+Constraints: Filters are independent.</p>
+<p>good:   reusability and flexibility; support concurrency
+bad:    need translator filters for filters that do not speak same language; not good for incremental updates</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This style takes a transformational view/approach to data.  Everything that comes in is modified, translated, and passed down the pipeline.</p>
+</div>
+</div>
+<div class="section" id="layered-architecture">
+<h5>Layered Architecture<a class="headerlink" href="#layered-architecture" title="Permalink to this headline">¶</a></h5>
+<p>Each layer provides a service to the layer above. Lower layers are closer to the machine. Higher layers provide more abstraction.</p>
+<p>Components:     layers
+Connectors:     calls between layers
+Contraints:     Only communicate with the layer directly below you</p>
+<p>good:   natural supports abstraction; great reusability
+bad:    overhead reduces performance.  Switching between layers hurts performance</p>
+</div>
+<div class="section" id="call-and-return-architectures">
+<h5>Call and Return Architectures<a class="headerlink" href="#call-and-return-architectures" title="Permalink to this headline">¶</a></h5>
+<p>Each node makes a call to another node, which then returns some value</p>
+<p>components:     functions
+connectors:     function calls
+constraints:    stack based</p>
+</div>
+<div class="section" id="object-oriented-architectures">
+<h5>Object Oriented Architectures<a class="headerlink" href="#object-oriented-architectures" title="Permalink to this headline">¶</a></h5>
+<p>Components:     objects/ methods
+Connectors:     messages
+Constraint:     Objects are responsbile for maintaining the integrity of its representation through encapsulation.</p>
+<p>good:   easy to abstract which increases reusability
+bad:    inheritance means that there is a long train of code that you have to maintain, objects must know the identity of another object in order to communicate (high/tight-coupling) with it</p>
+<dl class="docutils">
+<dt>Object Oriented terminology:</dt>
+<dd><ul class="first last">
+<li><p class="first">object:       an instance of a class</p>
+</li>
+<li><p class="first">class:        datatype that provides both attributes and operations on those operations</p>
+</li>
+<li><p class="first">objects communicate by sending messages</p>
+</li>
+<li><p class="first">messages:     consists of the name of the operation to invoke (i.e. the method), the destination object and any parameters.  Messages invoke methods</p>
+</li>
+<li><p class="first">inheritance:  ability of a subclass to reuse or have access to all attributes and operations of its parent(s).</p>
+</li>
+<li><dl class="first docutils">
+<dt>under the idea of subclassing, classes fall into a hierarchical relationships.</dt>
+<dd><ul class="first last simple">
+<li>anything that is true for a parent is true for its children (but not the other way around)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A subclass may:</dt>
+<dd><ul class="first last simple">
+<li>keep existing behavior</li>
+<li>add behavior</li>
+<li>override behavior</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>A subclass may <strong>not</strong>:</dt>
+<dd><ul class="first last simple">
+<li>remove behavior</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="event-based-architecture">
+<h5>Event Based Architecture<a class="headerlink" href="#event-based-architecture" title="Permalink to this headline">¶</a></h5>
+<p>Components:     whatever you like (objects, functions, layers)
+Connectors:     whatever you had before and events</p>
+<blockquote>
+<div><em>Whatever you had before</em> is called explicit invocations
+<em>Events</em> are implicit invocations</div></blockquote>
+<p>When a change occurs to a component, it announces an event (broadcasts).
+Components that are listning for (registered for) an event have their event handler invoked.</p>
+<p>Constraint:     the announcer does not know who receives the event or in what order multiple components receive it</p>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd>Twitter, web-frameworks / browsers, windowing system</dd>
+</dl>
+<p>good:   a component does not have to know the identity of another compontent in order to communicate with it (low/loose-coupling)
+bad:    unpredictable, hard to debug asynchronous code</p>
+</div>
+<div class="section" id="example-of-chosing-an-architecture">
+<h5>Example of Chosing an Architecture<a class="headerlink" href="#example-of-chosing-an-architecture" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Problem:</dt>
+<dd><dl class="first docutils">
+<dt>Given a system w/ 2 componenets:</dt>
+<dd>V: represents a set of vertices
+E: represents a set of edges</dd>
+<dt>Requirements:</dt>
+<dd>When an edge is added to E, its vertices must be added to V.
+When a vertex is deleted from V, the incident edges are deleted from E</dd>
+</dl>
+<p>Relationship is named G (for graph).</p>
+<p class="last">In the future, we might need to modify G to G&#8217;.
+Also we might add a new component C that keeps track of the number of vertices in V.</p>
+</dd>
+</dl>
+<p>The point:  most real-world applications are hybrids of multiple systems.</p>
+</div>
+</div>
+<div class="section" id="class-based-modeling">
+<h4>Class Based Modeling<a class="headerlink" href="#class-based-modeling" title="Permalink to this headline">¶</a></h4>
+<p>UML has a class diagram.</p>
+</div>
+</div>
+<div class="section" id="design-concepts">
+<h3>Design Concepts<a class="headerlink" href="#design-concepts" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Key terms:</dt>
+<dd><ul class="first last simple">
+<li>modularity</li>
+<li>abstraction</li>
+<li>refinement</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="modularity">
+<h4>Modularity<a class="headerlink" href="#modularity" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>modularity:</dt>
+<dd><ul class="first last simple">
+<li>dividing a system into independent components that can be independently managed/thought about</li>
+<li>we do this because a single monolithic system is too difficult to understand</li>
+</ul>
+</dd>
+<dt>Example:</dt>
+<dd><dl class="first docutils">
+<dt>consider two problems, P1 and P2.  Let C represent the complexity of each problem:</dt>
+<dd>C(P1+P2) &gt; C(P1) + C(P2)</dd>
+</dl>
+<p class="last">The complexity of P1 and P2 together is greater than the sum of the complexity of P1 and P2 independently.
+It is easier to think about problems in smaller components.</p>
+</dd>
+</dl>
+<p>Too many modules however leads to too much linkage between modules.  Too few modules leads to too much complexity within each module</p>
+</div>
+<div class="section" id="abstraction">
+<h4>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Abstraction:</dt>
+<dd>The hiding of details to facilitate understanding.</dd>
+<dt>Different types of abstractions:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>procedural:</dt>
+<dd><p class="first last">follow the recipe.  You feed it the input, it spits output and you don&#8217;t care how it works</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>data:</dt>
+<dd><p class="first last">you don&#8217;t know what the data looks like underneath</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>control:</dt>
+<dd><p class="first last">you don&#8217;t know how control is done or who&#8217;s in charge (event-based model)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="refinement">
+<h4>Refinement<a class="headerlink" href="#refinement" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Refinement:</dt>
+<dd>A method of design that uses a top down strategy that successfully reveals levels of detail.
+Also called <em>elaboration</em></dd>
+<dt>Example:</dt>
+<dd>Debugging a program.  Start at the top level and dig down until you locate the problem.
+Layered architectures work off this principle.</dd>
+</dl>
+<p>Abstraction and refinement are complementary</p>
+</div>
+</div>
+</div>
+<div class="section" id="chapter-8">
+<h2>Chapter 8<a class="headerlink" href="#chapter-8" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Main points:</dt>
+<dd><ul class="first last simple">
+<li>Coupling and Cohesion</li>
+<li>Traditional metrics</li>
+<li>Object-Oriented Metrics</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="cohesion">
+<h3>Cohesion<a class="headerlink" href="#cohesion" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Cohesion:</dt>
+<dd>Is the degreee of relatedness within a module, unit or component</dd>
+</dl>
+<p>A cohesive module should do one thing and do it well.  It helps us to understand and maintain software.
+All relevant code is in one location and there is no extraneous code.</p>
+<div class="section" id="different-types-of-cohesion">
+<h4>Different Types of Cohesion<a class="headerlink" href="#different-types-of-cohesion" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Coincidental Cohesion:</dt>
+<dd>Two tasks (or ideas or pieces of functionality) are in the same module for no good or apparent reason</dd>
+<dt>Logical Cohesion:</dt>
+<dd>Two tasks that related logically (do the same think like conersion or output) are in the same module</dd>
+<dt>Temporal Cohesion:</dt>
+<dd>Two tassks that occur near one another in time are in the same module</dd>
+<dt>Procedural Cohesion:</dt>
+<dd>Occurs when two tasks that are evaluated in the same order in the same module</dd>
+<dt>Communication Cohesion</dt>
+<dd>Two tasks that rely on the same data structure are in the same module</dd>
+</dl>
+<p>Items are ordered from <em>low</em> to <em>high</em> cohesiveness</p>
+</div>
+</div>
+<div class="section" id="coupling">
+<h3>Coupling<a class="headerlink" href="#coupling" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Coupling:</dt>
+<dd>The degree or level of interconnectivity (or interdependence) among modules</dd>
+</dl>
+<p>Less/Lower/Looser coupling also helps software maintenance.
+Changes are less likely to ripple through the system.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You want high cohesion and low coupling.</p>
+</div>
+<div class="section" id="different-types-of-coupling">
+<h4>Different Types of Coupling<a class="headerlink" href="#different-types-of-coupling" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Data Coupling:</dt>
+<dd>Simple Argument list of atomic values</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Atomic types are integers, references, pointers</p>
+</div>
+<dl class="docutils">
+<dt>Stamp Coupling:</dt>
+<dd>Portions of data structures are pass as arguments</dd>
+<dt>Control Coupling:</dt>
+<dd>Pass a control flag as an argument</dd>
+<dt>External Coupling:</dt>
+<dd>Ties to input, output, and other external devices</dd>
+<dt>Common Coupling:</dt>
+<dd>Access to a common global data structure</dd>
+<dt>Content Couplin:</dt>
+<dd>One module just goes in and violates access control to access data in another module</dd>
+</dl>
+<p>Items are ordered from loose to tight.</p>
+</div>
+</div>
+<div class="section" id="metrics">
+<h3>Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Metrics:</dt>
+<dd>Quantify quality</dd>
+</dl>
+<p>We want our software to have certain qualities.  Whether explicitly specified or not (maintainable, usable, reusable, flexible, adaptable, etc.).
+All of these qualities of software are hard to measure.</p>
+<dl class="docutils">
+<dt>To be useful a metric should be:</dt>
+<dd><ul class="first last simple">
+<li>simple to compute</li>
+<li>simple to understand</li>
+<li>intuitive</li>
+</ul>
+</dd>
+</dl>
+<p>Early metrics tend to be more low-level and code oriented; whereas, more recent metrics are more high level and design oriented.</p>
+<div class="section" id="traditional-metrics">
+<h4>Traditional Metrics<a class="headerlink" href="#traditional-metrics" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="lines-of-code">
+<h5>Lines of Code<a class="headerlink" href="#lines-of-code" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Rationale:</dt>
+<dd>more lines of code means more complexity or functionality</dd>
+</dl>
+<p>It&#8217;s simple to compute and intuitive.</p>
+<dl class="docutils">
+<dt>Problems:</dt>
+<dd><ul class="first last simple">
+<li>More lines does not necessarily lead to more complexity</li>
+<li>What actually defines a <em>line</em> of code</li>
+<li>This system made sense in Assembly, where each line is a different statement.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="halstead-s-complexity-metric">
+<h5>Halstead&#8217;s Complexity Metric<a class="headerlink" href="#halstead-s-complexity-metric" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Rationale:</dt>
+<dd>More operators and operands = more complex</dd>
+</dl>
+<p>n1 = # of operators (unique)
+n2 = # of unique operands</p>
+<p>N1 = total # of operators
+N2= total # of operands</p>
+<dl class="docutils">
+<dt>EX:</dt>
+<dd><p class="first">main()
+{</p>
+<blockquote>
+<div>int a, b, c, avg;
+scanf(&#8220;%d %d %d&#8221;, &amp;a, &amp;b, &amp;c);
+avg = (a + b + c) / 3;
+printf(&#8220;avg = %d&#8221;, avg);</div></blockquote>
+<p class="last">}
+The unique operators are: main, (), {}, int, scanf, &amp;, =, +, /, printf
+The unique operands are: a, b, c, avg, &#8220;%d %d %d&#8221;, 3, &#8220;avg = %d&#8221;</p>
+</dd>
+<dt>Properties:</dt>
+<dd><ul class="first last simple">
+<li>n = n1 + n2 = program vocabulary</li>
+<li>N = N1 + N2 = program length</li>
+<li>V = N*log(n) = Program Volumne</li>
+</ul>
+</dd>
+</dl>
+<p>Halstead&#8217;s complexity metric measures the textual/lexical complexity not the structural complexity.</p>
+</div>
+<div class="section" id="mccabe-s-cyclomatic-complexity">
+<h5>McCabe&#8217;s Cyclomatic Complexity<a class="headerlink" href="#mccabe-s-cyclomatic-complexity" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Rationale:</dt>
+<dd>Complexity is more related to structure of a program than to its text.  The more complicated control-flow, the more complex the program</dd>
+</dl>
+<p>Relies on the use of Flow Graphs.</p>
+<dl class="docutils">
+<dt>Quantities:</dt>
+<dd><p class="first">N = number of nodes
+E = number of edges
+Complexity = E - N + 2</p>
+<p class="last">If P = # of  desicion nodes, then complexity = P + 1</p>
+</dd>
+</dl>
+<p>Problem with McCabe&#8217;s is that it doesn&#8217;t take into account the fact that text also changes the complexity of a module</p>
+</div>
+<div class="section" id="henry-kafura-information-flow">
+<h5>Henry Kafura Information Flow<a class="headerlink" href="#henry-kafura-information-flow" title="Permalink to this headline">¶</a></h5>
+<p>Rationale: the connections between modules that result in complexity.  Measures the inter-module flow</p>
+<dl class="docutils">
+<dt>Quantities:</dt>
+<dd><p class="first">Fan_in = number of incoming connections
+Fan_out = number of outgoing connections</p>
+<p class="last">Complexity_module = (Fan_in * Fan_out)^2
+Complexity_total = sum of Complexity_modules</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="object-oriented-metrics">
+<h4>Object Oriented Metrics<a class="headerlink" href="#object-oriented-metrics" title="Permalink to this headline">¶</a></h4>
+<p>Object oriented metrics typically differ from traditonal metrics.  Rather than just focusing on complexity, they often try and measure characteristics such as abstraction, and reuse.</p>
+<p>We will discuss one set of metrics - Chidamber and Kember (CK)</p>
+<div class="section" id="weighted-methods-per-class-wmc">
+<h5>Weighted Methods Per Class (WMC)<a class="headerlink" href="#weighted-methods-per-class-wmc" title="Permalink to this headline">¶</a></h5>
+<p>Use your favorite traditional completixy metric, apply it to each method in a class and add them up.
+The higher the number, the more complex the class is (and therefore harder to understand, modify, ... )</p>
+</div>
+<div class="section" id="depth-of-inheritance-tree-dit">
+<h5>Depth of Inheritance Tree (DIT)<a class="headerlink" href="#depth-of-inheritance-tree-dit" title="Permalink to this headline">¶</a></h5>
+<p>Length of the longest path in the inheritance tree (from root to a leaf)</p>
+<p>High number: more reuse (good), more complexity (bad)
+Low number: less reuse (bad), less complexity (good)</p>
+<p>The deeper a class in the hierarchy, the greater the number of methods it will probably inherit which makes it harder to predict its behavior.</p>
+<p>Deeper trees involve greater design complexity since more classes and methods are involved.</p>
+<p>Deeper classes in the tree have a greater potential for reusing inherited methods.</p>
+</div>
+<div class="section" id="number-of-children-noc">
+<h5>Number of Children (NOC)<a class="headerlink" href="#number-of-children-noc" title="Permalink to this headline">¶</a></h5>
+<p>Number of subclasses of a parent class.</p>
+<p>Higher number:  greater reuse (good), dilution abstraction (bad)</p>
+</div>
+<div class="section" id="lack-of-cohesion-methods-lcom">
+<h5>Lack of Cohesion Methods (LCOM)<a class="headerlink" href="#lack-of-cohesion-methods-lcom" title="Permalink to this headline">¶</a></h5>
+<p>Consider a class with methods m1, m2, ..., mn and instance variables i1, i2, ..., ik</p>
+<p>P = set of all method pairs that have non-common INSTANCE variables
+Q = Set of all method pairs that have common INSTANCE variables</p>
+<p>LCOM = <a href="#id6"><span class="problematic" id="id7">|P|</span></a> - <a href="#id8"><span class="problematic" id="id9">|Q|</span></a> if <a href="#id10"><span class="problematic" id="id11">|P|</span></a> &gt; <a href="#id12"><span class="problematic" id="id13">|Q|</span></a> else 0</p>
+<dl class="docutils">
+<dt>EX:</dt>
+<dd><p class="first">M1 = {a,b,c ,s}     //method M1 uses instance variables a,b,c,s
+M2 = {d,b,z}
+M3 = {f,h,n}</p>
+<p>Consider each pair
+(M1,M2) -&gt; Q
+(M1,M3) -&gt; P
+(M2,M3) -&gt; P</p>
+<p class="last">LCOM = <a href="#id14"><span class="problematic" id="id15">|P|</span></a> - <a href="#id16"><span class="problematic" id="id17">|Q|</span></a> = 2 - 1 = 1</p>
+</dd>
+</dl>
+<p>Trying to measure the cohesion of modules.
+High LCOM means high cohesion, low LCOM means low cohesion</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="chapter-10">
+<h2>Chapter 10<a class="headerlink" href="#chapter-10" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Main Points:</dt>
+<dd><ul class="first last simple">
+<li>What is the point of testing?</li>
+<li>How can we &#8220;test&#8221; the system?</li>
+<li>What are validation and verification?</li>
+<li>Code Coverage for testing?</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="quality">
+<h3>Quality<a class="headerlink" href="#quality" title="Permalink to this headline">¶</a></h3>
+<p>Clearly, we want our software to be high quality.  Quality assurance refers to activities to measure and improve quality.
+Quality control rferes to activities to verify the quantity.</p>
+<dl class="docutils">
+<dt>Quality:</dt>
+<dd>Can be defined as conformance to specification and serving a purpose.</dd>
+</dl>
+<p>The former part of that definition refers to the verification and the latter refers to validation</p>
+</div>
+<div class="section" id="v-process-model">
+<h3>V Process Model<a class="headerlink" href="#v-process-model" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Requirements                             [validation]       acceptance testing</dt>
+<dd><dl class="first last docutils">
+<dt>High Level (architectural design)    [verification]    System testing</dt>
+<dd><dl class="first last docutils">
+<dt>Low Level (program level design) [verification]   unit testing</dt>
+<dd>implementation</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Move from requirements down to implementation, then back up to the testing.
+Things towards the top are more abstract, and things towards the bottom are more concrete.</p>
+<p><em>Verification</em> answers the question &#8220;did we build the product right?&#8221;</p>
+<p><em>Validation</em> answers the question &#8220;did we build the right product?&#8221;</p>
+</div>
+<div class="section" id="lack-of-quality">
+<h3>Lack Of Quality<a class="headerlink" href="#lack-of-quality" title="Permalink to this headline">¶</a></h3>
+<p>Quality is lacking due to errors.</p>
+<dl class="docutils">
+<dt>Fault/defect:</dt>
+<dd>a condition that may cause a failure</dd>
+<dt>Failure:</dt>
+<dd>Inability of a system to conform to specifications</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A fault does not have to be in code.  Faults can also exist in requirements and design documents</p>
+</div>
+<p>The later an erorr is found, the more expensive it is to fix</p>
+</div>
+<div class="section" id="finding-errors">
+<h3>Finding Errors<a class="headerlink" href="#finding-errors" title="Permalink to this headline">¶</a></h3>
+<p>We can find faults in many ways.  <strong>Testing</strong> is one way.</p>
+<dl class="docutils">
+<dt>Testing:</dt>
+<dd>involves running the program with the purpose of <em>finding errors</em>.
+It is the most common, easiest, and &#8220;cheapest&#8221; way
+It is also the only <em>dynamic</em> way (i.e. running the program)</dd>
+</dl>
+<p>There are also many <em>static</em> ways to find errors, but these are typically harder and more &#8220;expensive.&#8221;</p>
+<p>We can do inspections, reviews, or even use formal methods to prove the code correct.  We can also do a static analysis of the code.</p>
+</div>
+<div class="section" id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
+<p>Testing can only show the <em>presence</em> of defects, not their absence.</p>
+<p>In other words, testing cannot be used to prove a program correct because exhaustive testing is simply not possible.</p>
+<dl class="docutils">
+<dt>Example:</dt>
+<dd>Program to find roots of quadratic ax^2+bx+c.
+We have three inputs, a,b and c.
+Let&#8217;s assume each input is a 32 bit quanity.  Also assume that we can do one test in 1 ns.
+We would need 2.5 trillion years to test all possible inputs</dd>
+<dt>Another definition of testing:</dt>
+<dd>To provide a general assessment of quality.  The better the test cases, the better the assessment</dd>
+</dl>
+<div class="section" id="who-does-the-testing">
+<h4>Who Does the Testing?<a class="headerlink" href="#who-does-the-testing" title="Permalink to this headline">¶</a></h4>
+<p>Programmers do <em>unit testing</em>.
+Testers do <em>system and integration testing</em>
+Users do <em>alpha</em> (in house) and <em>beta</em> (not in house) testing</p>
+</div>
+<div class="section" id="what-is-tested">
+<h4>What is Tested?<a class="headerlink" href="#what-is-tested" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Unit testing:</dt>
+<dd>Test an individual unit</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A <em>unit</em> is a handful of functions or classes that ideally exhibit high cohesion</p>
+</div>
+<dl class="docutils">
+<dt>Integration/System testing:</dt>
+<dd>All componenets to test a complete system</dd>
+</dl>
+</div>
+<div class="section" id="when-to-stop-testing">
+<h4>When to Stop Testing?<a class="headerlink" href="#when-to-stop-testing" title="Permalink to this headline">¶</a></h4>
+<p>Never.  Slightly more practical answer - when all bugs are found. In actuality, when you executed all the test cases.</p>
+</div>
+<div class="section" id="fault-seeding">
+<h4>Fault Seeding<a class="headerlink" href="#fault-seeding" title="Permalink to this headline">¶</a></h4>
+<p>Purposely placing a few errors in the code and then giving it to a test team.</p>
+<dl class="docutils">
+<dt>The idea is that:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="c">#of seeded faults found / total # of seeded faults) = (#of unseeded faults found) / (Total # of non-seeded faults)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Assumption:</dt>
+<dd>Distribution across code / functionality of seeded faults matches closely that of actual faults.</dd>
+<dt>Predicting the actual number of faults:</dt>
+<dd><ul class="first last simple">
+<li>Metrics to infer which modules are more complex and therefore more prone to errors</li>
+<li>Intuition or experience</li>
+<li>Historical knoweledge of the code (including that of off the shelf code)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="types-of-testing">
+<h4>Types of Testing<a class="headerlink" href="#types-of-testing" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="acceptance-testing">
+<h5>Acceptance Testing<a class="headerlink" href="#acceptance-testing" title="Permalink to this headline">¶</a></h5>
+<p>Done before official acceptance by the customer (before official release of software).
+Black box testing.</p>
+</div>
+<div class="section" id="conformance-testing">
+<h5>Conformance Testing<a class="headerlink" href="#conformance-testing" title="Permalink to this headline">¶</a></h5>
+<p>Meeting standards requirements.
+Black box testing.</p>
+</div>
+<div class="section" id="configuration-testing">
+<h5>Configuration Testing<a class="headerlink" href="#configuration-testing" title="Permalink to this headline">¶</a></h5>
+<p>Testing across different platforms.
+Black box testing.</p>
+</div>
+<div class="section" id="performance-testing">
+<h5>Performance Testing<a class="headerlink" href="#performance-testing" title="Permalink to this headline">¶</a></h5>
+<p>Testing non-functional requirements.
+Black box testing.</p>
+</div>
+<div class="section" id="stress-testing">
+<h5>Stress Testing<a class="headerlink" href="#stress-testing" title="Permalink to this headline">¶</a></h5>
+<p>Testing for gradual degradation under the increasing workload
+Black box testing.</p>
+</div>
+</div>
+<div class="section" id="genearting-test-cases">
+<h4>Genearting Test Cases<a class="headerlink" href="#genearting-test-cases" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>From <em>intuition</em>:</dt>
+<dd>no guidance, just experience</dd>
+<dt>From <em>specification</em>:</dt>
+<dd>black box testing</dd>
+<dt>From <em>code</em>:</dt>
+<dd>white box testing</dd>
+<dt>From <em>existing cases</em>:</dt>
+<dd>regression testing</dd>
+<dt>From <em>history</em>:</dt>
+<dd>Looks where errors ahve occurred in the past</dd>
+</dl>
+</div>
+<div class="section" id="black-box-testing">
+<h4>Black Box Testing<a class="headerlink" href="#black-box-testing" title="Permalink to this headline">¶</a></h4>
+<p>Testing done without knoweldge of the implementation.  Testing done at the level of the specification.</p>
+<p>Key idea:   generate a minimal number of test cases by considering which test cases are equivalent</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Equivalent test cases are bad.  We want to identify them and remove them.</p>
+</div>
+<div class="section" id="equivalence-class-partitioning">
+<h5>Equivalence Class Partitioning<a class="headerlink" href="#equivalence-class-partitioning" title="Permalink to this headline">¶</a></h5>
+<p>Motiviation:    eliminate redundant test cases
+Reason:         Save time and computing effort
+Idea:           Input is divided into several classes. A representative of each class is used for testing.</p>
+<dl class="docutils">
+<dt>Example: Application That makes Recommendations based on age</dt>
+<dd><p class="first">Inputs      Test Input
+0-12        7
+13-19       17
+20-35       27
+36-120      47
+&lt;0          -5
+&gt;120        130</p>
+<p>Pick a representative value from each class of input.  Testing 7 is just as good as testing 8, so we don&#8217;t need to test everything from 0-12.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We classify valid and invalid inputs</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="boundary-value-analysis">
+<h5>Boundary Value Analysis<a class="headerlink" href="#boundary-value-analysis" title="Permalink to this headline">¶</a></h5>
+<p>Goal:       Improve ECP by selecting the most appropriate test inputs
+Rationale:  In reality, if we look at historical data, many errors ocur when checking the end points of a range
+Idea:       pick as test cases - the boundary, boundary + 1, boundary - 1</p>
+<dl class="docutils">
+<dt>Example: Application That makes Recommendations based on age</dt>
+<dd><p class="first">Inputs      Test Input  Using BVA
+0-12        7           -1,0,1, 11,12,13
+13-19       17          12,13,14,18,19,20
+20-35       27          19,20,21,34,35,36
+36-120      47          35,36,37,119,120,121
+&lt;0          -5          -1,0
+&gt;120        130         120,121</p>
+<p class="last">#you can then remove the invalid (repeated) arguments in each test stream
+Inputs      Test Input  Using BVA
+0-12        7           -1,0,1, 11,12
+13-19       17          13,14,18,19
+20-35       27          20,21,34,35
+36-120      47          36,37,119,120
+&lt;0          -5          -1
+&gt;120        130         121</p>
+</dd>
+<dt>Example: Application requires a username of only (lower case) letters and at most eight characters.</dt>
+<dd><p class="first">What are some good test cases using ECP and BVA?
+First consider the length of the string</p>
+<blockquote>
+<div>inputs  ECP     BVA
+1-8     3       1,2,7,8
+&lt; 1     0       0
+&gt; 8     10      9</div></blockquote>
+<p>Test strings of length 0,1,2,7,8,9 with valid characters in order to isolate the difference between failing from too many characters and failing from invalid characters.</p>
+<dl class="last docutils">
+<dt>Now we can consider the content.</dt>
+<dd>Inputs          BVA
+a-z (97-122)    97,98,121,122
+&lt;a              96
+&gt;z              123</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="whitebox-testing">
+<h4>Whitebox Testing<a class="headerlink" href="#whitebox-testing" title="Permalink to this headline">¶</a></h4>
+<p>Testing done with knoweledge of the code, so let&#8217;s use it</p>
+<div class="section" id="code-coverage">
+<h5>Code Coverage<a class="headerlink" href="#code-coverage" title="Permalink to this headline">¶</a></h5>
+<p>We want good code coverage from our test suite. The better the code coveage the more test cases required, but it betters our perception of quality.</p>
+</div>
+<div class="section" id="logical-paths">
+<h5>Logical Paths<a class="headerlink" href="#logical-paths" title="Permalink to this headline">¶</a></h5>
+<p>Ideally we want all possible paths thru the code to be executed. For programs with loop, the number of paths is infinite.  We can deal with this problemby limiting loops to at most one iteration per loop.
+For each binary decision, there are 2 possible paths.  In the worst case a program with N desicions has 2^N possible paths</p>
+</div>
+<div class="section" id="linearly-independence-paths">
+<h5>Linearly Independence Paths<a class="headerlink" href="#linearly-independence-paths" title="Permalink to this headline">¶</a></h5>
+<p>Not all paths are linearly independent , in that some are combnations of other paths.</p>
+<dl class="docutils">
+<dt>The number of linearly independent paths is the same as the cylomatic complexity.</dt>
+<dd>E - N + 2 = 6 - 5 + 2 = 3
+P + 1 = 2 + 1 = 3
+#Regions = 3</dd>
+</dl>
+</div>
+<div class="section" id="branch-coverage">
+<h5>Branch Coverage<a class="headerlink" href="#branch-coverage" title="Permalink to this headline">¶</a></h5>
+<p>Also called decision coverage or edge coverage.</p>
+<p>Ensure that each branch will be taken and not taken if we look across all tests</p>
+</div>
+<div class="section" id="statement-coverage">
+<h5>Statement Coverage<a class="headerlink" href="#statement-coverage" title="Permalink to this headline">¶</a></h5>
+<p>Also known as node coverage</p>
+<p>Ensure that each statement will be executed at least once</p>
+</div>
+<div class="section" id="function-coverage">
+<h5>Function Coverage<a class="headerlink" href="#function-coverage" title="Permalink to this headline">¶</a></h5>
+<p>Ensures that each function is executed at least once</p>
+<p>One test case for a single-function flowgraph</p>
+</div>
+</div>
+<div class="section" id="other-ways-of-finding-errors">
+<h4>Other Ways of Finding Errors<a class="headerlink" href="#other-ways-of-finding-errors" title="Permalink to this headline">¶</a></h4>
+<p>Inspections and Reviews are two other ways of finding errors</p>
+<dl class="docutils">
+<dt>Review</dt>
+<dd>simply any process that uses humans to examine a software artifact for the purpose of finding errors</dd>
+<dt>Inspection</dt>
+<dd>just a more detailed review</dd>
+<dt>Walk through</dt>
+<dd>An explanation of the artifact</dd>
+</dl>
+<p>Finding errors is cheaper using testing, but fixing them is expensive.  Testing works only on code, but reviews work on any artifact.  Testing catches errors &#8216;late&#8217; whereas inspections and reviews catch errors &#8216;early&#8217;</p>
+<dl class="docutils">
+<dt>Formal Methods</dt>
+<dd>Prove the program correct.  usually only practical for small portions of the code</dd>
+<dt>Static Analysis Tools</dt>
+<dd><p class="first">Examine the source code looking for errors.
+Results must be examined by hand.</p>
+<dl class="last docutils">
+<dt>Ex:</dt>
+<dd>Lint, gcc -wall</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="ieee-code-of-ethics-for-software-engineers">
+<h3>IEEE Code of Ethics for Software Engineers<a class="headerlink" href="#ieee-code-of-ethics-for-software-engineers" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>PUBLIC - Software engineers shall act consistently with the public interest.</li>
+<li>CLIENT AND EMPLOYER - Software engineers shall act in a manner that is in the best interests of their client and employer consistent with the public interest.</li>
+<li>PRODUCT - Software engineers shall ensure that their products and related modifications meet the highest professional standards possible.</li>
+<li>JUDGMENT - Software engineers shall maintain integrity and independence in their professional judgment.</li>
+<li>MANAGEMENT - Software engineering managers and leaders shall subscribe to and promote an ethical approach to the management of software development and maintenance.</li>
+<li>PROFESSION - Software engineers shall advance the integrity and reputation of the profession consistent with the public interest.</li>
+<li>COLLEAGUES - Software engineers shall be fair to and supportive of their colleagues.</li>
+<li>SELF - Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession.</li>
+</ol>
+<p>In summary, software engineers are expected to act in a manner that benefits the public good (or at least doesn&#8217;t put it in harm&#8217;s way).  This means that software enginners must produce safe and reliable code that doesn&#8217;t put human life at risk and encourage other software engineers to do the same.</p>
+</div>
+</div>
+<div class="section" id="chapter-11">
+<h2>Chapter 11<a class="headerlink" href="#chapter-11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-configuration-management">
+<h3>What is Configuration Management<a class="headerlink" href="#what-is-configuration-management" title="Permalink to this headline">¶</a></h3>
+<p>Management of software artifacts (docuemnts, code, test cases).  Coordination of change control. Performing (or at least faciliting) system builds.</p>
+<dl class="docutils">
+<dt>Examples:</dt>
+<dd><ul class="first last simple">
+<li>Git</li>
+<li>NPM</li>
+<li>Brewer (ruby)</li>
+<li>Jenkins</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="chapter-12-support-and-maintenance">
+<h2>Chapter 12: Support and Maintenance<a class="headerlink" href="#chapter-12-support-and-maintenance" title="Permalink to this headline">¶</a></h2>
+<p>You have finally released the product, now the real work - we must support.</p>
+<div class="section" id="support">
+<h3>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h3>
+<p>Non defect support and defect support.
+Techincal teams handle defect support; whereas non-technical teams handle non-defect support.</p>
+<div class="section" id="non-defect-support">
+<h4>Non-defect support<a class="headerlink" href="#non-defect-support" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>General Help (instructions)</li>
+<li>Usage Questions</li>
+<li>Additional feature requests</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="defect-support">
+<h4>Defect support<a class="headerlink" href="#defect-support" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li>Bug fixes</li>
+<li>Workarounds</li>
+<li>Recovery from failure</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="maintenance">
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h3>
+<p>The final, never ending phase of software development.  Accounts  for 80% of all efforts and cost spent</p>
+<div class="section" id="types-of-maintenance">
+<h4>Types of Maintenance<a class="headerlink" href="#types-of-maintenance" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Corrective:</dt>
+<dd>fixing errors in requirements, design or implementation (20% of all maintenance)</dd>
+<dt>Adaptive:</dt>
+<dd>accommodating new platforms (25% of all maintenance)</dd>
+<dt>Perfective:</dt>
+<dd>enhancements / adding new features (50% of all maintenance)</dd>
+<dt>Preventative:</dt>
+<dd>Improving software quality for the next round of maintenance (5% of all maintenance)</dd>
+</dl>
+<div class="section" id="perfective-maintenance">
+<h5>Perfective Maintenance<a class="headerlink" href="#perfective-maintenance" title="Permalink to this headline">¶</a></h5>
+<p>Majority of maintenance cost.  40% of all efforts and cost spent are on perfective maintenance.</p>
+<dl class="docutils">
+<dt>A major way to reduce software costs is to reduce perfective maintenance. To do this we can:</dt>
+<dd><ul class="first last simple">
+<li>Practice good design by implementing high cohesion and low coupling.</li>
+<li>Use evolutionary process models.</li>
+<li>do preventive maintenance</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="preventive-maintenance">
+<h5>Preventive Maintenance<a class="headerlink" href="#preventive-maintenance" title="Permalink to this headline">¶</a></h5>
+<p>Software needs preventive maintenance because while software doesn&#8217;t break down (bits don&#8217;t deteriorate) the world around the software changes.</p>
+<p>Business needs change, technology changes, society changes.</p>
+<p>The application of today&#8217;s methodologies to yesterday&#8217;s systems to support tomorrow&#8217;s requirements.</p>
+</div>
+<div class="section" id="other-maintenance-terms">
+<h5>Other Maintenance Terms<a class="headerlink" href="#other-maintenance-terms" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Reverse Engineering</dt>
+<dd>Extracting design from the code</dd>
+<dt>Re-engineering</dt>
+<dd>Is reverse engineering followed by forward engineering</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="chapter-4-software-process-models">
+<h2>Chapter 4: Software Process Models<a class="headerlink" href="#chapter-4-software-process-models" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Main points:</dt>
+<dd><ul class="first last simple">
+<li>What is a software process model</li>
+<li>Why process models are important</li>
+<li>No one software process model is best</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="what-is-a-software-process-model">
+<h3>What is a Software Process Model<a class="headerlink" href="#what-is-a-software-process-model" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Software Process Model:</dt>
+<dd>It&#8217;s a structure or framework for the development of a software product</dd>
+<dt>It defines several things:</dt>
+<dd><ul class="first last simple">
+<li>Set of tasks to be performed</li>
+<li>Inputs and Outputs of each task</li>
+<li>Preconditions and post condition of each task</li>
+<li>Sequence of flow</li>
+<li>Who does each task</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="simple-process-model">
+<h4>Simple Process Model<a class="headerlink" href="#simple-process-model" title="Permalink to this headline">¶</a></h4>
+<p>Even the simplest pieces of software employ a process model: code-compile-test</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Not the technical term for this process model</p>
+</div>
+<p>Problem Statement &#8212;&gt; write code &#8212;&gt; compile &#8212;&gt; test &#8212;&gt; &#8220;product&#8221;</p>
+<p>In the event of an error, go back to write code.</p>
+<dl class="docutils">
+<dt>This model ignores:</dt>
+<dd><ul class="first last simple">
+<li>Design</li>
+<li>Requirements</li>
+<li>Maintenance</li>
+<li>Formal testing</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="why-are-process-models-important">
+<h3>Why are Process Models Important<a class="headerlink" href="#why-are-process-models-important" title="Permalink to this headline">¶</a></h3>
+<p>As software gets more complex, so does development. If we don&#8217;t have a process in place then failures become more likely because of complexity.</p>
+</div>
+<div class="section" id="different-process-models">
+<h3>Different Process Models<a class="headerlink" href="#different-process-models" title="Permalink to this headline">¶</a></h3>
+<p>This sections contains descriptions of several different process models.   You should know how to compare and contrast the different models.</p>
+<div class="section" id="waterfall-model">
+<h4>Waterfall Model<a class="headerlink" href="#waterfall-model" title="Permalink to this headline">¶</a></h4>
+<p>One of the earliest models and it is based on the traditional engineering model.</p>
+<p>Requirements &#8211;&gt; Design &#8211;&gt; Implementation &#8211;&gt; Testing &#8211;&gt; Release</p>
+<p>Requirements: creates requirements document / specification
+Design: creates design document (solution)
+Implementation: create the system (code)
+Testing: produces tested code ready for release</p>
+<p>In order to start, you need a business need (a why).</p>
+<dl class="docutils">
+<dt>Advantages:</dt>
+<dd><ul class="first last simple">
+<li>Simple</li>
+<li>Familiarity.  It is applicable to more than just software engineering</li>
+<li>It has great process visibility (the ability to measure how close to completion) due to its document-driven, linear nature</li>
+</ul>
+</dd>
+<dt>Disadvantages:</dt>
+<dd><ul class="first last simple">
+<li>Doesn&#8217;t accommodate changes</li>
+<li>Customer never sees product until release so they have no opportunity to voice opinion about it.</li>
+<li>Assumes that requirements are clear, complete, and immutable</li>
+</ul>
+</dd>
+<dt>Use for:</dt>
+<dd><ul class="first last">
+<li><p class="first">Small projects</p>
+</li>
+<li><p class="first">Clear and well-defined requirements</p>
+</li>
+<li><dl class="first docutils">
+<dt>Examples:</dt>
+<dd><ul class="first last simple">
+<li>Control systems</li>
+<li>Embedded system</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="variation-1">
+<h5>Variation #1<a class="headerlink" href="#variation-1" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Requirements &#8211;&gt;    Design &#8211;&gt;  Implementation &#8211;&gt;  Testing &#8211;&gt;     Release</dt>
+<dd>&#8211;&gt;    Test Plan &#8211;&gt;   Low Level testing &#8211;&gt;</dd>
+</dl>
+<p>Do testing all along the design and implementation phases.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h4>V Process Model<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Req Engr                    acceptance testing</dt>
+<dd><dl class="first last docutils">
+<dt>System Design        system testing</dt>
+<dd><dl class="first last docutils">
+<dt>Program Design  unit testing</dt>
+<dd>Implementation</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Req Engr &#8212; acceptance testing -&gt; validation</p>
+<p>System design &#8211; system testing -&gt; verification</p>
+<p>Program design &#8212; unit testing -&gt; verification</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Has all of the same advantages and disadvantages as the Waterfall model</p>
+</div>
+</div>
+<div class="section" id="incremental-model">
+<h4>Incremental Model<a class="headerlink" href="#incremental-model" title="Permalink to this headline">¶</a></h4>
+<p>Modification of the waterfall model.  Key idea is decomposing the large system into several smaller systems.  Key question is how to integrate the smaller ones.</p>
+<dl class="docutils">
+<dt>There are 2 approaches:</dt>
+<dd><ul class="first last simple">
+<li>Continuous Integration</li>
+<li>Multiple Releases</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="continuous-integration">
+<h5>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline">¶</a></h5>
+<p>Decompose the system into several components.  Each component represents a piece of major functionality.  All components are worked on simultaneously. As each componenet is finished, it is dropped into an integration bucket.</p>
+<blockquote>
+<div>Req1    Req2    ...     ReqX
+Des     Des             Des
+Impl    Impl            Impl
+Test    Test            Test
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+|   Integration bucket      | &#8212;&#8212;-&gt; System Testing &#8212;&#8212;-&gt;
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</div></blockquote>
+<p>Each requirement is done as a mini-waterfall model.</p>
+</div>
+<div class="section" id="multiple-releases">
+<h5>Multiple Releases<a class="headerlink" href="#multiple-releases" title="Permalink to this headline">¶</a></h5>
+<p>First release contains core functionality.  Subsequent releases build upon the core (and previous releases).</p>
+<dl class="docutils">
+<dt>Req  -&gt;   Des  -&gt;   Impl  -&gt;  Test  -&gt;  Package+Release</dt>
+<dd><dl class="first last docutils">
+<dt>Req  -&gt;   Des  -&gt;   Impl  -&gt;  Test  -&gt;  Package+Release</dt>
+<dd><dl class="first last docutils">
+<dt>Req  -&gt;   Des  -&gt;   Impl  -&gt;  Test  -&gt;  Package+Release</dt>
+<dd>Req  -&gt;   Des  -&gt;   Impl  -&gt;  Test  -&gt;  Package+Release</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="evaluation-of-incremental-model">
+<h5>Evaluation of Incremental Model<a class="headerlink" href="#evaluation-of-incremental-model" title="Permalink to this headline">¶</a></h5>
+<dl class="docutils">
+<dt>Advantages:</dt>
+<dd><ul class="first last simple">
+<li>Encourages low coupling (better at accomendating change)</li>
+<li>Allows different groups to develop in parallel</li>
+<li>Encourages careful documentation of abstractions</li>
+<li>Works when people or other recoursces are ntot immediately available</li>
+</ul>
+</dd>
+<dt>Disadvatages:</dt>
+<dd><ul class="first last simple">
+<li>Coordination of overlapping releases is difficult</li>
+<li>Idea of decomposition can be difficult</li>
+<li>Poorer process visibility</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="spiral-model">
+<h4>Spiral Model<a class="headerlink" href="#spiral-model" title="Permalink to this headline">¶</a></h4>
+<p>An evolutionary model that factors in the risks of future development.
+A <em>risk</em> involves a cost benfit analysis.  Risks are things like - how much will it cost, what is the benefit, what will break, how long will it take, etc...</p>
+<div class="section" id="evaluation-of-the-spiral-model">
+<h5>Evaluation of the Spiral Model<a class="headerlink" href="#evaluation-of-the-spiral-model" title="Permalink to this headline">¶</a></h5>
+<p>Explicitly takes into account that the product will need to change over the course of its development.  To do this, the spiral model relies on extensive, frequent customer communication, especially when compared to other models.</p>
+<p>This model assumes that the customer is frequently available for discussion.</p>
+<p>It also relies on accurate risk analysis.  You also have poor process visibility.  You have no idea how far along the project is.</p>
+</div>
+</div>
+<div class="section" id="rational-unified-process-rup">
+<h4>Rational Unified Process (RUP)<a class="headerlink" href="#rational-unified-process-rup" title="Permalink to this headline">¶</a></h4>
+<p>Idea: unline the waterfall model, which views req, design, implementation, test as phases, RUP views them as activities</p>
+<p>All of the activities happen in parallel.  Each activity happens at different amounts at different periods of times.  For example, requirements gathering happens a lot more at the beginning, but it never actually ends; whereas implementation happens very little at the beginning, but ramps up later.</p>
+<p>Because of the parallel structure, you have more process visibility.  However, with lots of overlapping activities, you have more intra and inter team communication.
+Acknowledges  need for verifying efficacy of requirements and design by implementing and testing.</p>
+</div>
+</div>
+</div>
+<div class="section" id="problems-with-traditional-processes">
+<h2>Problems with Traditional Processes<a class="headerlink" href="#problems-with-traditional-processes" title="Permalink to this headline">¶</a></h2>
+<p>Many traditional models were created decades ago at a time when big projects and companies were the norm (e.g. areospace).
+Development times were &gt;5 years.
+Times have changed and smaller companies and projects prevail.
+Also, today technology changes quite rapidly.</p>
+<p>Traditional models cannot cope with changing requirements.
+They have a hidden assumption thatthe requirements are well understood.
+Traditional models rely on extra development effort to make up for lost time - the mythical man month</p>
+<p>Traditional models have a lot of waste or duplication of effort (e.g. lots of documents are prouced but never looked at and is quickly out of date)</p>
+</div>
+<div class="section" id="team-structures">
+<h2>Team Structures<a class="headerlink" href="#team-structures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="traditional-process-models">
+<h3>Traditional process Models<a class="headerlink" href="#traditional-process-models" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Three styles:</dt>
+<dd><dl class="first last docutils">
+<dt>Controlled Centralized:</dt>
+<dd><ul class="first last simple">
+<li>Well defined leader who makes all decisions with no discussion.</li>
+<li>Maintains conistency, unified vision, and less time wasted</li>
+</ul>
+</dd>
+<dt>Democractic Decentralized:</dt>
+<dd><ul class="first last simple">
+<li>No leader at all</li>
+<li>Discussions take place as group</li>
+<li>Consensus is needed before moving forward</li>
+<li>Allows for diversity of opinions, which generates new ideas and novel solutions</li>
+<li>Not a good model under time pressure</li>
+</ul>
+</dd>
+<dt>Controlled Decentralized:</dt>
+<dd><ul class="first last simple">
+<li>Desicions take place as group</li>
+<li>But there is one person responsible for limiting discussion</li>
+<li>The goal is to still allow diversity of opinions to facilitate creation of novel solutions while also making sure that deadlines are met</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="agile-development">
+<h2>Agile Development<a class="headerlink" href="#agile-development" title="Permalink to this headline">¶</a></h2>
+<p>What is agile devlopment?  Why do we need agile development?  What is extreme programming?</p>
+<div class="section" id="agile-processes">
+<h3>Agile Processes<a class="headerlink" href="#agile-processes" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Agile Process:</dt>
+<dd><dl class="first last docutils">
+<dt>a family of software development methodologies that have some common characteristics:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>short process and iterations</dt>
+<dd><ul class="first last simple">
+<li>divide work into small pieces then release software to customer as often as possible</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>incremental design</dt>
+<dd><ul class="first last simple">
+<li>dont do a complete design upfront since it is going to change.  Delay design decisions as long as possible</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>user involvement</dt>
+<dd><ul class="first last simple">
+<li>Don&#8217;t produce formal, immutable docs at start, instead ask users for constant feedback</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Minimal documentation</dt>
+<dd><ul class="first last simple">
+<li>Source code considered documentation</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Informal communications</dt>
+<dd><ul class="first last simple">
+<li>Maintain constant communication, but it&#8217;s informal</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Change</dt>
+<dd><ul class="first last simple">
+<li>Assume everything will change</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="an-example-agile-process-extreme-programming-xp">
+<h3>An Example Agile Process: Extreme Programming (XP)<a class="headerlink" href="#an-example-agile-process-extreme-programming-xp" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="what-is-xp">
+<h4>What is XP?<a class="headerlink" href="#what-is-xp" title="Permalink to this headline">¶</a></h4>
+<p>A Model for small teams facing the pressure of changing requirements</p>
+</div>
+<div class="section" id="takeaways">
+<h4>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">¶</a></h4>
+<p>Places a lot of emphasis on business value.  To achieve this, it relies on frequent custom communication.
+Balances cost demoand with programming effort.</p>
+</div>
+<div class="section" id="key-characteristics-of-xp">
+<h4>Key Characteristics of XP<a class="headerlink" href="#key-characteristics-of-xp" title="Permalink to this headline">¶</a></h4>
+<p><strong>Short releases</strong>:             every 2-4 weeks
+<strong>Simple Design</strong>:              You don&#8217;t spend a lot of time up front on a complicated design.
+<strong>Test driven development</strong>:    write the unit test before you write the code (unbaised test cases)
+<strong>Pairwise Programming</strong>:       two programmers on one keyboard.  Catch mistakes
+<strong>Collective Ownership</strong>:       anyone can change anything at any time
+<strong>Continuing Integration</strong>:     Always have a working copy
+<strong>On site customer</strong>:           Customer is a team member
+<strong>Coding Standards</strong>:           consistent naming conventions, etc.
+<strong>Documentless</strong>:               No tradional documentation is produced instead the code and test suites are considered documentation</p>
+</div>
+<div class="section" id="analysis-of-xp">
+<h4>Analysis of XP<a class="headerlink" href="#analysis-of-xp" title="Permalink to this headline">¶</a></h4>
+<p><strong>Pairwise programming</strong>:   Are we wasting personnel or gaining quality (verification)
+<strong>Customer Communication</strong>: Are we wasting everyone&#8217;s time or gaining quaility (validation)
+<strong>Documentless</strong>:           Saving time or lost without a road map?</p>
+</div>
+</div>
+</div>
+<div class="section" id="final-review">
+<h2>Final Review<a class="headerlink" href="#final-review" title="Permalink to this headline">¶</a></h2>
+<p>Monday December 7th, 2015 &#64; 1:30pm</p>
+<p>30% is pre-midterm
+70% is post-midterm</p>
+<dl class="docutils">
+<dt>Two part exam:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>First part is questions 1-10 with a maximum of 90 minutes.  It covers:</dt>
+<dd><ul class="first last simple">
+<li>requirements, design, testing, maintenance, metrics</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Second part is questions 11-16.  Remainder of time.  It covers:</dt>
+<dd><ul class="first last simple">
+<li>Ethics, stories, process models, Team structures</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Requirements:</dt>
+<dd><ul class="first last simple">
+<li>AHP</li>
+<li>Entity relationship</li>
+<li>UML diagram</li>
+</ul>
+</dd>
+<dt>Design:</dt>
+<dd><ul class="first last simple">
+<li>high level vs low level design</li>
+<li>software architectures</li>
+</ul>
+</dd>
+<dt>Metrics:</dt>
+<dd><ul class="first last simple">
+<li>Coupling and cohesion</li>
+<li>standard metrics</li>
+<li>OO metrics</li>
+</ul>
+</dd>
+<dt>Testing:</dt>
+<dd><ul class="first last simple">
+<li>point of testing</li>
+<li>types/ phases of testing (blackbox vs whitebox; unit, integration, system, acceptance; regression, compliance, stress)</li>
+<li>validation:   pertains to requirements</li>
+<li>verification: pertains to checking the code</li>
+</ul>
+</dd>
+<dt>Maintenance:</dt>
+<dd><ul class="first last simple">
+<li>types of maintenance</li>
+<li>cost of each time of maintenance</li>
+</ul>
+</dd>
+<dt>Ethics:</dt>
+<dd><ul class="first last simple">
+<li>IEEE code of ethics</li>
+</ul>
+</dd>
+<dt>Stories:</dt>
+<dd><ul class="first last simple">
+<li>All on online</li>
+</ul>
+</dd>
+<dt>Process Models:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Tradtional models:</dt>
+<dd><ul class="first last simple">
+<li>waterfall</li>
+<li>incremental</li>
+<li>spiral</li>
+<li>RUP</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Team Structures:</dt>
+<dd><ul class="first last simple">
+<li>Democratic</li>
+<li>Centralized</li>
+<li>CSPAN</li>
+<li>XP</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to COEN 174 - Software Engineering’s documentation!"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Giovanni Briggs.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
